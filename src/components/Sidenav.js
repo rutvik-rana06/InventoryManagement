@@ -18,6 +18,11 @@ import ListItemText from "@mui/material/ListItemText";
 import InboxIcon from "@mui/icons-material/MoveToInbox";
 import { useNavigate } from "react-router-dom";
 
+import HomeOutlinedIcon from '@mui/icons-material/HomeOutlined';
+import FormatListNumberedOutlinedIcon from '@mui/icons-material/FormatListNumberedOutlined';
+import AddCircleOutlinedIcon from '@mui/icons-material/AddCircleOutlined';
+import MenuOutlinedIcon from '@mui/icons-material/MenuOutlined';
+
 
 const drawerWidth = 240;
 
@@ -81,13 +86,15 @@ export default function Sidenav() {
     
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={()=>{setOpen(!open)}}>
+        {open && <h2>Inventory</h2>}&nbsp;
+          <MenuOutlinedIcon sx={{minHeight: 60,}} onClick={()=>{setOpen(!open)}}>
             {theme.direction === "rtl" ? (
               <ChevronRightIcon />
             ) : (
               <ChevronLeftIcon />
             )}
-          </IconButton>
+          </MenuOutlinedIcon>
+          
         </DrawerHeader>
         <Divider />
         <List>
@@ -99,7 +106,7 @@ export default function Sidenav() {
                 px: 2.5,
               }}
             >
-              <ListItemIcon
+              <HomeOutlinedIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : "auto",
@@ -107,7 +114,7 @@ export default function Sidenav() {
                 }}
               >
                 <InboxIcon />
-              </ListItemIcon>
+              </HomeOutlinedIcon>
               <ListItemText primary="Home" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
@@ -119,7 +126,7 @@ export default function Sidenav() {
                 px: 2.5,
               }}
             >
-              <ListItemIcon
+              <FormatListNumberedOutlinedIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : "auto",
@@ -127,7 +134,7 @@ export default function Sidenav() {
                 }}
               >
                 <InboxIcon />
-              </ListItemIcon>
+              </FormatListNumberedOutlinedIcon>
               <ListItemText primary="List Hardware" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>
@@ -139,7 +146,7 @@ export default function Sidenav() {
                 px: 2.5,
               }}
             >
-              <ListItemIcon
+              <AddCircleOutlinedIcon
                 sx={{
                   minWidth: 0,
                   mr: open ? 3 : "auto",
@@ -147,7 +154,7 @@ export default function Sidenav() {
                 }}
               >
                 <InboxIcon />
-              </ListItemIcon>
+              </AddCircleOutlinedIcon>
               <ListItemText primary="Add Hardware" sx={{ opacity: open ? 1 : 0 }} />
             </ListItemButton>
           </ListItem>

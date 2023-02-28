@@ -1,14 +1,11 @@
 import React from 'react'
 import Box from "@mui/material/Box";
 import Sidenav from './Sidenav';
-// import Navbar from './Navbar';
-
 
 
 const Home = () => {
   return (
     <>
-  
     <Box sx={{ display: "flex" }}>
         <Sidenav/>
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
