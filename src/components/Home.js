@@ -11,6 +11,7 @@ const Home = () => {
     <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         
         <h1>Home</h1>
+        <h3>This is a home page!</h3>
       </Box>
      
      </Box>
