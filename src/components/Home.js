@@ -12,6 +12,8 @@ const Home = () => {
         
         <h1>Home</h1>
         <h3>This is a home page!</h3>
+        <h3>This is a home page2!</h3>
+
       </Box>
      
      </Box>
